@@ -17,14 +17,14 @@ export async function main() {
 
     async function getFormattedInput() {
         const parsedInput = await parseInput(`${__dirname}/input.txt`);
-        const inputNumbers = parsedInput.map((entry: string) => {
+        const formattedInput = parsedInput.map(entry => {
             const [move, value] = entry.split(" ");
             return {
                 move,
                 value: Number.parseInt(value)
             };
         });
-        return inputNumbers as FormattedInput[];
+        return formattedInput as FormattedInput[];
     }
 
     function answerFirstProblem(commands: FormattedInput[]) {

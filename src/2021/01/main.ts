@@ -11,7 +11,7 @@ export async function main() {
 
     async function getFormattedInput() {
         const parsedInput = await parseInput(`${__dirname}/input.txt`);
-        const inputNumbers = parsedInput.map((entry: string) => Number.parseInt(entry));
+        const inputNumbers = parsedInput.map(entry => Number.parseInt(entry));
         return inputNumbers;
     }
 
